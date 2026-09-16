@@ -1,14 +1,3 @@
-/* 1. 设置网页的全局背景图 */
-body {
-    background-image: url('/img/p.jpg'); /* 换成你想要的全局背景图名字 */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed !important; /* 核心魔法：让背景像墙纸一样钉在底端，不随鼠标滚动 */
-}
-
-/* 2. 让文章所在的“容器”变成半透明的毛玻璃 */
-.board {
-    background-color: rgba(255, 255, 255, 0.7) !important; /* 0.7 是透明度，越小越透明 */
-    backdrop-filter: blur(10px); /* 磨砂质感：让透过去的背景稍微模糊一点，防止背景太花看不清字 */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* 给玻璃加一点高级的边缘阴影 */
+.banner {
+    background-position: center bottom !important;
 }
