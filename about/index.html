@@ -19,15 +19,15 @@
   <meta name="author" content="greed.Y">
   <meta name="keywords" content="">
   
-    <meta name="description" content="“数据是理性的刻度，而文字与旋律是感性的回响。”你好，我是greed.Y。欢迎来到我的数字花园。  如果你对我的文章、项目或某些想法感兴趣，欢迎随时与我交流。  Phone number: [15213789047] 邮箱: [2433049518@qq.com]希望这里的某一行代码、或某一段文字，能恰好与你产生共鸣。">
+    <meta name="description" content="“数据是理性的刻度，而文字与旋律是感性的回响。”你好，我是greed.Y。欢迎来到我的数字花园。  如果你对我的文章、项目或某些想法感兴趣，欢迎随时与我交流。  Phone number: [15213789047] Email: [2433049518@qq.com]希望这里的某一行代码、或某一段文字，能恰好与你产生共鸣。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="关于你眼中的我">
 <meta property="og:url" content="http://example.com/about/index.html">
 <meta property="og:site_name" content="lies of Y">
-<meta property="og:description" content="“数据是理性的刻度，而文字与旋律是感性的回响。”你好，我是greed.Y。欢迎来到我的数字花园。  如果你对我的文章、项目或某些想法感兴趣，欢迎随时与我交流。  Phone number: [15213789047] 邮箱: [2433049518@qq.com]希望这里的某一行代码、或某一段文字，能恰好与你产生共鸣。">
+<meta property="og:description" content="“数据是理性的刻度，而文字与旋律是感性的回响。”你好，我是greed.Y。欢迎来到我的数字花园。  如果你对我的文章、项目或某些想法感兴趣，欢迎随时与我交流。  Phone number: [15213789047] Email: [2433049518@qq.com]希望这里的某一行代码、或某一段文字，能恰好与你产生共鸣。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-09-14T16:00:00.000Z">
-<meta property="article:modified_time" content="2026-09-15T17:42:16.211Z">
+<meta property="article:modified_time" content="2026-09-17T15:40:08.777Z">
 <meta property="article:author" content="greed.Y">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -336,7 +336,7 @@
 <p>如果你对我的文章、项目或某些想法感兴趣，欢迎随时与我交流。</p>
 <ul>
 <li><strong>Phone number</strong>: [15213789047]</li>
-<li><strong>邮箱</strong>: [<a href="mailto:&#50;&#x34;&#51;&#51;&#x30;&#x34;&#57;&#x35;&#49;&#x38;&#x40;&#113;&#x71;&#46;&#x63;&#111;&#109;">2433049518@qq.com</a>]<br>希望这里的某一行代码、或某一段文字，能恰好与你产生共鸣。</li>
+<li><strong>Email</strong>: [<a href="mailto:&#x32;&#52;&#x33;&#51;&#x30;&#52;&#57;&#x35;&#x31;&#x38;&#x40;&#113;&#113;&#46;&#x63;&#111;&#109;">2433049518@qq.com</a>]<br>希望这里的某一行代码、或某一段文字，能恰好与你产生共鸣。</li>
 </ul>
 
 
@@ -396,21 +396,26 @@
   
   
 </div>
-<!-- APlayer 唱片机播放器 -->
+<!-- 全局 APlayer 音乐播放器 (本地纯净版带歌词) -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<div id="aplayer"></div>
+<script>
+  const ap = new APlayer({
+      container: document.getElementById('aplayer'),
+      fixed: true,              /* 保持左下角全局悬浮 */
+      autoplay: false,          
+      lrcType: 3,               /* 开启本地歌词解析 */
+      audio: [{
+          name: 'Feel',
+          artist: 'Lies of P',
+          url: '/audio/feel.mp3',   
+          cover: '/img/p.jpg',  
+          lrc: '/audio/feel.lrc'    
+      }]
+  });
+</script>
 
-<meting-js
-    server="netease"
-    type="song"
-    id="2122946462" 
-    fixed="true" 
-    autoplay="false"
-    loop="all"
-    order="random"
-    theme="#2980b9">
-</meting-js>
   </footer>
 
   <!-- Scripts -->

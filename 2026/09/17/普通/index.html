@@ -477,6 +477,12 @@
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/2026/09/17/%E5%AD%A6%E9%85%B1%E9%A6%99%E9%A5%BC%E8%BF%98%E6%98%AF%E5%AD%A6%E7%BB%9F%E8%AE%A1%EF%BC%9F/" title="&#39;学酱香饼还是学统计？&#39;">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">&#39;学酱香饼还是学统计？&#39;</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
@@ -591,21 +597,26 @@
   
   
 </div>
-<!-- APlayer 唱片机播放器 -->
+<!-- 全局 APlayer 音乐播放器 (本地纯净版带歌词) -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<div id="aplayer"></div>
+<script>
+  const ap = new APlayer({
+      container: document.getElementById('aplayer'),
+      fixed: true,              /* 保持左下角全局悬浮 */
+      autoplay: false,          
+      lrcType: 3,               /* 开启本地歌词解析 */
+      audio: [{
+          name: 'Feel',
+          artist: 'Lies of P',
+          url: '/audio/feel.mp3',   
+          cover: '/img/p.jpg',  
+          lrc: '/audio/feel.lrc'    
+      }]
+  });
+</script>
 
-<meting-js
-    server="netease"
-    type="song"
-    id="2122946462" 
-    fixed="true" 
-    autoplay="false"
-    loop="all"
-    order="random"
-    theme="#2980b9">
-</meting-js>
   </footer>
 
   <!-- Scripts -->

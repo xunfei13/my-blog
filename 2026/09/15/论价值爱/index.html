@@ -27,7 +27,7 @@
 <meta property="og:description" content="爱！爱！爱！">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-09-15T15:10:06.000Z">
-<meta property="article:modified_time" content="2026-09-16T17:22:42.727Z">
+<meta property="article:modified_time" content="2026-09-17T15:21:21.158Z">
 <meta property="article:author" content="greed.Y">
 <meta property="article:tag" content="随笔，小雨">
 <meta name="twitter:card" content="summary_large_image">
@@ -386,12 +386,12 @@
               <div class="markdown-body">
                 
                 <div align="center">
-  <span style="font-size: 16px; color: #888;">—— 爱！爱！爱</span>
+  <span style="font-size: 16px; color: #888;">—— 爱！爱！爱！</span>
 </div>
 <br>
 
 <blockquote>
-<p>“缺爱的人不会被爱，人只会因为有价值被爱”。</p>
+<p><em><strong>“缺爱的人不会被爱，人只会因为有价值被爱“</strong></em></p>
 </blockquote>
 <p>这是我从身边发生的事情上得到的思考和辩证，极度缺爱的人往往处于低自尊或焦虑依恋状态，容易表现为过度讨好、猜忌或情感勒索。而从价值爱方面可以分为生存，情绪，精神三个层次，分别决定稳定，舒适，不可替代性。</p>
 <p>小时候对于喜欢是不过多思考的，是懵懂的，但是从价值方面来说属于情绪与外形的，可能更多的是在于情绪方面，安全感与偏爱，年龄上来了，想法是不变的。正如那句话，你眼中的别人才是你自己。</p>
@@ -586,21 +586,26 @@
   
   
 </div>
-<!-- APlayer 唱片机播放器 -->
+<!-- 全局 APlayer 音乐播放器 (本地纯净版带歌词) -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<div id="aplayer"></div>
+<script>
+  const ap = new APlayer({
+      container: document.getElementById('aplayer'),
+      fixed: true,              /* 保持左下角全局悬浮 */
+      autoplay: false,          
+      lrcType: 3,               /* 开启本地歌词解析 */
+      audio: [{
+          name: 'Feel',
+          artist: 'Lies of P',
+          url: '/audio/feel.mp3',   
+          cover: '/img/p.jpg',  
+          lrc: '/audio/feel.lrc'    
+      }]
+  });
+</script>
 
-<meting-js
-    server="netease"
-    type="song"
-    id="2122946462" 
-    fixed="true" 
-    autoplay="false"
-    loop="all"
-    order="random"
-    theme="#2980b9">
-</meting-js>
   </footer>
 
   <!-- Scripts -->

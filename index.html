@@ -339,6 +339,46 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
+        <a href="/2026/09/17/%E5%AD%A6%E9%85%B1%E9%A6%99%E9%A5%BC%E8%BF%98%E6%98%AF%E5%AD%A6%E7%BB%9F%E8%AE%A1%EF%BC%9F/" target="_self">
+          &#39;学酱香饼还是学统计？&#39;
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2026/09/17/%E5%AD%A6%E9%85%B1%E9%A6%99%E9%A5%BC%E8%BF%98%E6%98%AF%E5%AD%A6%E7%BB%9F%E8%AE%A1%EF%BC%9F/" target="_self">
+        <div>
+          我的答案是香！
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2026-09-17 20:44" pubdate>
+              2026-09-17
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%92%B8%E9%A6%99%EF%BC%8C%E8%93%9D%E6%B5%B7/">#咸香，蓝海</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
         <a href="/2026/09/17/%E6%99%AE%E9%80%9A/" target="_self">
           普通
         </a>
@@ -664,21 +704,26 @@
   
   
 </div>
-<!-- APlayer 唱片机播放器 -->
+<!-- 全局 APlayer 音乐播放器 (本地纯净版带歌词) -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<div id="aplayer"></div>
+<script>
+  const ap = new APlayer({
+      container: document.getElementById('aplayer'),
+      fixed: true,              /* 保持左下角全局悬浮 */
+      autoplay: false,          
+      lrcType: 3,               /* 开启本地歌词解析 */
+      audio: [{
+          name: 'Feel',
+          artist: 'Lies of P',
+          url: '/audio/feel.mp3',   
+          cover: '/img/p.jpg',  
+          lrc: '/audio/feel.lrc'    
+      }]
+  });
+</script>
 
-<meting-js
-    server="netease"
-    type="song"
-    id="2122946462" 
-    fixed="true" 
-    autoplay="false"
-    loop="all"
-    order="random"
-    theme="#2980b9">
-</meting-js>
   </footer>
 
   <!-- Scripts -->

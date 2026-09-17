@@ -583,21 +583,26 @@
   
   
 </div>
-<!-- APlayer 唱片机播放器 -->
+<!-- 全局 APlayer 音乐播放器 (本地纯净版带歌词) -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<div id="aplayer"></div>
+<script>
+  const ap = new APlayer({
+      container: document.getElementById('aplayer'),
+      fixed: true,              /* 保持左下角全局悬浮 */
+      autoplay: false,          
+      lrcType: 3,               /* 开启本地歌词解析 */
+      audio: [{
+          name: 'Feel',
+          artist: 'Lies of P',
+          url: '/audio/feel.mp3',   
+          cover: '/img/p.jpg',  
+          lrc: '/audio/feel.lrc'    
+      }]
+  });
+</script>
 
-<meting-js
-    server="netease"
-    type="song"
-    id="2122946462" 
-    fixed="true" 
-    autoplay="false"
-    loop="all"
-    order="random"
-    theme="#2980b9">
-</meting-js>
   </footer>
 
   <!-- Scripts -->
